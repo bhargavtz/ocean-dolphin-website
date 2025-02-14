@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<meta charset="utf-8">
 
 <head>
     <meta charset="utf-8">
@@ -58,7 +56,7 @@
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <img src="public/Assets/w-ocen.png" alt="logo" title="logo" class="logo-default" />
         </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" title="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -381,30 +379,21 @@
         }
     </style>
     <section>
-        <div class="container-fluid bg-dark text-light footer pt-5 pb-3 px-5 wow fadeIn" data-wow-delay="0.1s"
+        <div class="container-fluid bg-dark text-light footer pt-5 pb-3 px-5 wow fadeIn footer-container" data-wow-delay="0.1s"
             style="border-top: 1px solid #fff;border-bottom: 1px solid #fff;">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <a href="index.html"><img src="public/Assets/w-ocen.png" alt="logo" title="logo"
-                            style="height: 50px;"></a>
+                    <a href="index.html"><img src="public/Assets/w-ocen.png" alt="logo" title="logo" class="footer-logo"></a>
                     <p class="mt-3 footer-content">
                         Ocean Dolphin represents various high-ranked universities across different countries:
                         Australia, Canada, New Zealand, UK, Europe, USA, and Singapore.
                     </p>
                     <div class="d-flex pt-2 pb-3 justify-content-center align-items-center">
-                        <a href="https://goo.gl/maps/8bMmrb4Q7esfK64W9" class="btn btn-outline-light btn-social"
-                            target="_blank"><i class="fab fa-google"></i></a>
-                        <a href="https://in.linkedin.com/in/ocean-dolphin-aa0942281"
-                            class="btn btn-outline-light btn-social" target="_blank"><i
-                                class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/oceandolphin_/" class="btn btn-outline-light btn-social"
-                            target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://twitter.com/OceanDolph89608" class="btn btn-outline-light btn-social"
-                            target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="https://www.facebook.com/OceanDolphinTechnolabs?mibextid=ZbWKwL"
-                            class="btn btn-outline-light btn-social" target="_blank"><i
-                                class="fab fa-facebook-f"></i></a>
-
+                        <a href="https://goo.gl/maps/8bMmrb4Q7esfK64W9" class="btn btn-outline-light btn-social" target="_blank" rel="noopener" title="Google Maps"><i class="fab fa-google"></i></a>
+                        <a href="https://in.linkedin.com/in/ocean-dolphin-aa0942281" class="btn btn-outline-light btn-social" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/oceandolphin_/" class="btn btn-outline-light btn-social" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/OceanDolph89608" class="btn btn-outline-light btn-social" target="_blank" rel="noopener" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/OceanDolphinTechnolabs?mibextid=ZbWKwL" class="btn btn-outline-light btn-social" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -433,32 +422,23 @@
         </div>
     </section>
 
-            <!-- Footer End -->
-
     <!-- call & whatsapp start -->
-    <div style="position:fixed; right:15px; bottom:100px; z-index:999999">
-        <a href="https://api.whatsapp.com/send?phone=919909925252" title="Whatspp Now For Inquiry" target="_blank">
-            <img src="public/Assets/img/whatsapp.png" alt="Whatspp Now For Inquiry" title="Whatspp Now For Inquiry"
-                width="50px;">
+    <div class="whatsapp-button">
+        <a href="https://wa.me/919898626000" target="_blank" rel="noopener" title="Contact on WhatsApp">
+            <img src="public/Assets/img/whatsapp.png" alt="WhatsApp" title="Contact on WhatsApp">
         </a>
     </div>
-    <div style="position:fixed; right:15px; bottom:170px; z-index:999999" title="Call Now For Inquiry">
-        <a href="tel:+919909925252">
-            <img src="public/Assets/img/phone-call.png" alt="Call Now For Inquiry" title="Call Now For Inquiry"
-                width="50px;">
+    <div class="call-button">
+        <a href="tel:+919898626000" title="Call Now">
+            <img src="public/Assets/img/phone-call.png" alt="Call Now" title="Call Now">
         </a>
     </div>
-    <!-- call & whatsapp end -->
-
     <div id="modal" class="gmodal">
         <span id="modal-close" class="gmodal-close">&times;</span>
-        <img id="modal-content" class="gmodal-content">
+        <img id="modal-content" class="gmodal-content" alt="Modal content">
         <div id="modal-caption" class="gmodal-caption"></div>
     </div>
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary back-to-top" style="padding: 10px 18px !important;border-radius: 50%;"><i
-            class="fa fa-angle-up"></i></a>
-
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-up"></i></a>
 
      <!-- JavaScript Libraries -->
      <script src="public/Assets/js/jquery-3.4.1.min.js"></script>
@@ -471,9 +451,5 @@
      <script src="public/Assets/js/jquery.validate.min.js"></script>
      <!-- Template Javascript -->
      <script src="public/Assets/js/main.js"></script>
-
-        
 </body>
-
-
 </html>
