@@ -1,0 +1,20 @@
+# Ocean Dolphin Robots.txt
+User-agent: *
+Allow: /
+Sitemap: https://oceandolphin.in/sitemap.xml
+
+# AI & LLM Search Engine Crawlers Allowed for Direct AI Indexing
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /

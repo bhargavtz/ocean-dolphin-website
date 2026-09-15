@@ -77,61 +77,105 @@ body{
 }
 
 
+/*** Top Bar ***/
+.topbar {
+    background: #0a2443;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.topbar a {
+    color: #e2e8f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.topbar a:hover {
+    color: #38bdf8;
+}
+
+.topbar-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    color: #ffffff;
+    margin-left: 6px;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.topbar-social a:hover {
+    background: #0f5d97;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
 /*** Navbar ***/
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
-    font-family: "FontAwesome";
+    font-family: "Font Awesome 6 Free", "FontAwesome", sans-serif;
     font-weight: 900;
     vertical-align: middle;
-    margin-left: 8px;
+    margin-left: 6px;
+}
+
+.navbar-light {
+    background: #ffffff !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
 }
 
 .navbar-light .navbar-nav .nav-link {
-    margin-right: 30px;
-    padding: 25px 0;
-    color: #FFFFFF;
+    margin-right: 25px;
+    padding: 22px 0;
+    color: #0f5d97 !important;
     font-size: 15px;
+    font-weight: 600;
     text-transform: uppercase;
     outline: none;
+    transition: color 0.3s ease;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link:focus,
-.navbar-light .navbar-nav .nav-link:active {
-    color: #fff;
+.navbar-light .navbar-nav .nav-link:focus {
+    color: #137ac6 !important;
 }
 
 .navbar-light .navbar-nav .show>.nav-link,
 .navbar-light .navbar-nav .nav-link.active {
-    color: #fff;
+    color: #0f5d97 !important;
+    font-weight: 700;
 }
 
 @media (max-width: 991.98px) {
     .navbar-light .navbar-nav .nav-link {
         margin-right: 0;
-        padding: 10px 0;
+        padding: 10px 15px;
+        color: #0f5d97 !important;
     }
 
     .navbar-light .navbar-nav {
         border-top: 1px solid #EEEEEE;
+        padding: 10px 0;
     }
 }
 
-.navbar-light .navbar-brand,
-.navbar-light a.btn {
-    height: 75px;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: #FFFFFF;
-    font-weight: 500;
+.navbar-light .navbar-brand {
+    height: 70px;
 }
 
 .navbar-light.sticky-top {
-    top: -100px;
-    transition: .5s;
-    background-color: rgba(29, 33, 74, 0.5) !important;
+    top: 0 !important;
+    transition: .3s;
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
 @media (min-width: 992px) {
@@ -140,28 +184,47 @@ body{
         margin-top: 0;
         opacity: 0;
         visibility: hidden;
-        transition: .5s;
-        background-color: rgba(183, 184, 188, 0.5);
+        transition: .3s ease;
+        background-color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        padding: 10px 0;
     }
 
-    .navbar .dropdown-menu .fade-down {
+    .navbar .dropdown-menu.fade-down {
         top: 100%;
-        transform: rotateX(-75deg);
+        transform: translateY(10px);
         transform-origin: 0% 0%;
-        background-color: #000000;
+        background-color: #ffffff;
     }
 
     .navbar .nav-item:hover .dropdown-menu {
         top: 100%;
-        transform: rotateX(0deg);
+        transform: translateY(0);
         visibility: visible;
-        transition: .5s;
+        transition: .3s ease;
         opacity: 1;
+    }
+
+    .dropdown-item {
+        color: #1e293b !important;
+        padding: 8px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+        background-color: #f0f7fc;
+        color: #0f5d97 !important;
+        padding-left: 24px;
     }
 }
 
-.logo-default{
-    height: 40px;
+.logo-default {
+    height: 42px;
 }
  
 
@@ -2256,3 +2319,226 @@ ul li {
 }
 
 
+
+
+/* ===================================================
+   MODERN 2026 UI UPGRADES (Glassmorphism, AI Widget, Animations)
+   =================================================== */
+
+:root {
+    --brand-primary: #0284c7;
+    --brand-dark: #091e3a;
+    --brand-accent: #38bdf8;
+    --brand-gradient: linear-gradient(135deg, #0284c7 0%, #0369a1 50%, #0c4a6e 100%);
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #334155;
+    background-color: #f8fafc;
+}
+
+/* Glassmorphism Stats Bar */
+.stats-banner {
+    margin-top: -50px;
+    position: relative;
+    z-index: 20;
+}
+
+.stats-card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px -5px rgba(15, 93, 151, 0.12), 0 0 0 1px rgba(15, 93, 151, 0.05);
+    padding: 24px 20px;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px -5px rgba(15, 93, 151, 0.18);
+}
+
+.stats-number {
+    font-size: 2.25rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #0369a1, #0284c7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+}
+
+.stats-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+}
+
+/* AI Visa Eligibility Wizard */
+.ai-wizard-section {
+    background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
+    padding: 80px 0;
+    position: relative;
+}
+
+.ai-wizard-card {
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(2, 132, 199, 0.12);
+    border: 1px solid rgba(2, 132, 199, 0.1);
+    overflow: hidden;
+}
+
+.ai-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(2, 132, 199, 0.1);
+    color: #0284c7;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.wizard-step {
+    display: none;
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+.wizard-step.active {
+    display: block;
+}
+
+.choice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+}
+
+.choice-btn {
+    border: 2px solid #e2e8f0;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 14px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-weight: 600;
+    color: #334155;
+}
+
+.choice-btn:hover {
+    border-color: #38bdf8;
+    background: #f0f9ff;
+    transform: translateY(-2px);
+}
+
+.choice-btn.selected {
+    border-color: #0284c7;
+    background: #e0f2fe;
+    color: #0369a1;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15);
+}
+
+.choice-flag {
+    font-size: 1.75rem;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Modern Animated Service Cards */
+.student-visa {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px 25px;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.student-visa::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--brand-gradient);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.student-visa:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px rgba(2, 132, 199, 0.15);
+    border-color: rgba(56, 189, 248, 0.4);
+}
+
+.student-visa:hover::before {
+    opacity: 1;
+}
+
+.student-visa h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 16px 0 10px;
+}
+
+.student-visa p {
+    font-size: 0.925rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Sleek Result Card */
+.result-box {
+    background: linear-gradient(135deg, #091e3a 0%, #0a2e5c 100%);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.result-badge-success {
+    background: rgba(34, 197, 94, 0.2);
+    color: #4ade80;
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+/* Pulse animation for CTA */
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+    50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+}
+
+.pulse-whatsapp {
+    animation: pulseGlow 2s infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
